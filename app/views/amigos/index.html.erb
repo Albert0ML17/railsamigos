@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Amigos</h1>
+
+<div id="amigos">
+  <% @amigos.each do |amigo| %>
+    <%= render amigo %>
+    <p>
+      <%= link_to "Ver información de este amigo", amigo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Añadir amigo", new_amigo_path %>

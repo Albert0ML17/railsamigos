@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @amigo %>
+
+<div>
+  <%= link_to "Editar a este amigo", edit_amigo_path(@amigo) %> |
+  <%= link_to "Regresar a la lista principal", amigos_path %>
+
+  <%= button_to "Eliminar a un amigo", @amigo, method: :delete %>
+</div>
