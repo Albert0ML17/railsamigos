@@ -25,7 +25,7 @@ class AmigosController < ApplicationController
 
     respond_to do |format|
       if @amigo.save
-        format.html { redirect_to amigo_url(@amigo), notice: "Amigo was successfully created." }
+        format.html { redirect_to amigo_url(@amigo), notice: "¡Añadiste a un nuevo amigo!." }
         format.json { render :show, status: :created, location: @amigo }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class AmigosController < ApplicationController
   def update
     respond_to do |format|
       if @amigo.update(amigo_params)
-        format.html { redirect_to amigo_url(@amigo), notice: "Amigo was successfully updated." }
+        format.html { redirect_to amigo_url(@amigo), notice: "Has actualizado correctamente a ese amigo." }
         format.json { render :show, status: :ok, location: @amigo }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class AmigosController < ApplicationController
     @amigo.destroy
 
     respond_to do |format|
-      format.html { redirect_to amigos_url, notice: "Amigo was successfully destroyed." }
+      format.html { redirect_to amigos_url, notice: "Has eliminado correctamente a ese amigo." }
       format.json { head :no_content }
     end
   end
